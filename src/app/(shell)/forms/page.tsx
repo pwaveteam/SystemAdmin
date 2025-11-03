@@ -23,9 +23,10 @@ const initialData:FormDoc[]=[
 {id:"f3",buttonLabel:"평가지 양식",buttonLocation:"도급협의체관리/안전보건수준 평가",fileUrl:"/files/evaluation.docx",fileName:"evaluation.docx",position:3,createdAt:"2025-09-01",updatedAt:"2025-09-01"},
 {id:"f4",buttonLabel:"회의록 양식",buttonLocation:"도급협의체관리/도급안전보건 협의체",fileUrl:"/files/meeting.docx",fileName:"meeting.docx",position:4,createdAt:"2025-09-01",updatedAt:"2025-09-01"},
 {id:"f5",buttonLabel:"점검지 양식",buttonLocation:"도급협의체관리/안전보건 점검",fileUrl:"/files/checklist.docx",fileName:"checklist.docx",position:5,createdAt:"2025-09-01",updatedAt:"2025-09-01"},
-{id:"f6",buttonLabel:"경영방침 양식",buttonLocation:"사업장관리/경영방침",fileUrl:"/files/policy.docx",fileName:"policy.docx",position:6,createdAt:"2025-09-01",updatedAt:"2025-09-01"},
-{id:"f7",buttonLabel:"안전보건정보 조사표 내려받기",buttonLocation:"위험성평가/사전 체크리스트",fileUrl:"/files/precheck-info.xlsx",fileName:"precheck-info.xlsx",position:7,createdAt:"2025-09-01",updatedAt:"2025-09-01"},
-{id:"f8",buttonLabel:"위험성평가 실시규정 예시 내려받기",buttonLocation:"위험성평가/사전 체크리스트",fileUrl:"/files/riskrule-example.pdf",fileName:"riskrule-example.pdf",position:8,createdAt:"2025-09-01",updatedAt:"2025-09-01"}
+{id:"f6",buttonLabel:"비상대응체계 가이드",buttonLocation:"대응매뉴얼/대응매뉴얼 목록",fileUrl:"/files/emergency-guide.pdf",fileName:"emergency-guide.pdf",position:6,createdAt:"2025-09-01",updatedAt:"2025-09-01"},
+{id:"f7",buttonLabel:"경영방침 양식",buttonLocation:"사업장관리/경영방침",fileUrl:"/files/policy.docx",fileName:"policy.docx",position:7,createdAt:"2025-09-01",updatedAt:"2025-09-01"},
+{id:"f8",buttonLabel:"안전보건정보 조사표 내려받기",buttonLocation:"위험성평가/사전 체크리스트",fileUrl:"/files/precheck-info.xlsx",fileName:"precheck-info.xlsx",position:8,createdAt:"2025-09-01",updatedAt:"2025-09-01"},
+{id:"f9",buttonLabel:"위험성평가 실시규정 예시 내려받기",buttonLocation:"위험성평가/사전 체크리스트",fileUrl:"/files/riskrule-example.pdf",fileName:"riskrule-example.pdf",position:9,createdAt:"2025-09-01",updatedAt:"2025-09-01"}
 ]
 
 export default function FormsPage():ReactElement{
