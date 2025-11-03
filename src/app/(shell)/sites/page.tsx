@@ -67,7 +67,8 @@ const handlePhoneChange=(value:string,callback:(v:string)=>void)=>{const sanitiz
 const validate=()=>{const e:Errors={};if(!form.code.trim())e.code="필수 입력";if(!form.name.trim())e.name="필수 입력";if(!form.owner.trim())e.owner="필수 입력";if(!form.phone.trim())e.phone="필수 입력";if(!form.address.trim())e.address="필수 입력";if(!form.startDate.trim())e.startDate="필수 입력";setErrors(e);return Object.keys(e).length===0}
 const saveForm=()=>{if(!validate())return;if(sheetMode==="add"){const nid=String(Date.now());setData(p=>[{...form,id:nid},...p])}else if(sheetMode==="edit"){setData(p=>p.map(v=>v.id===form.id?{...form}:v))}setSheetOpen(false)}
 
-const addSubForm=()=>{if(subForms.length>=5)return alert("서브계정은 최대 5개까지만 등록할 수 있습니다.");setSubForms(p=>[...p,{id:"",name:"",phone:""}])}
+const addSubForm=()=>{setSubForms(p=>[...p,{id:"",name:"",phone:""}])}
+  
 const saveSubAccount=()=>{if(!currentSite)return;const valid=subForms.every(f=>f.name.trim()&&f.phone.trim());if(!valid)return alert("모든 행의 이름과 전화번호를 입력해주세요.");const base=currentSite.accountId.replace("-admin","");const newSubs=subForms.map((s,i)=>({...s,id:`${base}-manager${(currentSite.subAccounts?.length??0)+i+1}`}));const updated={...currentSite,subAccounts:[...(currentSite.subAccounts||[]),...newSubs]};setData(p=>p.map(v=>v.id===currentSite.id?updated:v));setCurrentSite(updated);setSubForms([{id:"",name:"",phone:""}])}
 
 const columns:ColumnDef<Site>[]=[
